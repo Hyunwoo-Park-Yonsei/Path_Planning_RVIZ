@@ -52,7 +52,7 @@ class Drawer(object):
 
 if __name__ == "__main__":
     rospy.init_node("map_rviz_visualizer_node")
-    map_file = "/home/hayoung/personal/grepp_project_ws/src/map/path.pkl"
+    map_file = "/home/grepp_project_ws/src/map/path.pkl"
 
     map_pub = rospy.Publisher("/rviz/map", Marker, queue_size=1, latch=True)
     drawer = Drawer(map_file, r=255/255.0, g=236/255.0, b=139/255.0, a=0.8, scale=0.1)
