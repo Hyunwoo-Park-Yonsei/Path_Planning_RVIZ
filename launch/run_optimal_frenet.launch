@@ -1,0 +1,7 @@
+<launch>
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find simulation)/config.rviz" />
+  <node type="ego_vehicle.py" name="ego_car_simulation_node" pkg="simulation" />
+  <node type="map_drawer.py" name="map_node" pkg="path_follower" />
+  <node type="stanley_follower.py" name="stanley_follower_node" pkg="path_follower" />
+  <node type="planner.py" name="planner_node" pkg="optimal_frenet_planner" output="screen"/>
+</launch>
